@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Skin Studio - Testimoni</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --secondary: #0f4c75;
+            --accent: #ff9800;
+            --dark: #1e1e1e;
+            --light: #f5f5f5;
+            --success: #4caf50;
+            --text: #333333;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-icon {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e68900;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .user-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: var(--accent);
+            margin-top: 0.3rem;
+        }
+
+        .testimonial-content {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .skin-preview {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .skin-preview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .skin-name {
+            font-weight: 600;
+            margin-top: 0.5rem;
+            color: var(--secondary);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+            padding: 5rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: var(--accent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-column a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎮</span>
+                    <h1>Minecraft Skin Studio</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Layanan</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#" class="active">Testimoni</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="cta-button">Pesan Sekarang</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Testimoni Jasa Pembuatan Skin Minecraft</h2>
+            <p>Lihat pengalaman pelanggan kami yang telah menggunakan jasa pembuatan skin Minecraft custom. Skin unik untuk karakter Minecraft Anda!</p>
+            <a href="#" class="cta-button">Lihat Portfolio</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apa Kata Klien Kami</h2>
+                <p>Testimoni dari berbagai pemain Minecraft yang telah menggunakan jasa pembuatan skin custom kami</p>
+            </div>
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <span>👤</span>
+                        </div>
+                        <div class="user-info">
+                            <h4>Alex Johnson</h4>
+                            <p>YouTuber Minecraft</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Skin yang dibuat sangat detail dan sesuai dengan permintaan saya. Proses pengerjaan cepat dan komunikasi dengan pembuat sangat baik. Sangat direkomendasikan!"</p>
+                    </div>
+                    <div class="skin-preview">
+                        <div style="background:#8B4513; height:150px; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:white; font-weight:bold;">Preview Skin Alex</span>
+                        </div>
+                        <p class="skin-name">"Wild West Cowboy"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <span>👤</span>
+                        </div>
+                        <div class="user-info">
+                            <h4>Sarah Miller</h4>
+                            <p>Streamer Twitch</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Saya pesan skin untuk karakter fantasy elf dan hasilnya melebihi ekspektasi! Detailnya sangat bagus dan warna yang digunakan sangat menarik. Viewers saya banyak yang bertanya tentang skin ini."</p>
+                    </div>
+                    <div class="skin-preview">
+                        <div style="background:#228B22; height:150px; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:white; font-weight:bold;">Preview Skin Sarah</span>
+                        </div>
+                        <p class="skin-name">"Forest Elf Archer"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <span>👤</span>
+                        </div>
+                        <div class="user-info">
+                            <h4>David Wilson</h4>
+                            <p>Server Owner</p>
+                            <div class="rating">★★★★☆</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Saya memesan skin untuk seluruh staff server saya. Hasilnya konsisten dan berkualitas tinggi. Hanya sedikit delay pada pengiriman, tapi overall sangat memuaskan."</p>
+                    </div>
+                    <div class="skin-preview">
+                        <div style="background:#1E90FF; height:150px; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:white; font-weight:bold;">Preview Skin David</span>
+                        </div>
+                        <p class="skin-name">"Ocean Guardian"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <span>👤</span>
+                        </div>
+                        <div class="user-info">
+                            <h4>Lisa Chen</h4>
+                            <p>Content Creator</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Saya memberikan referensi karakter anime favorit saya dan hasilnya persis! Sangat detail dan warna yang digunakan tepat. Pelayanannya profesional dan responsif."</p>
+                    </div>
+                    <div class="skin-preview">
+                        <div style="background:#FF69B4; height:150px; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:white; font-weight:bold;">Preview Skin Lisa</span>
+                        </div>
+                        <p class="skin-name">"Kawaii Magical Girl"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <span>👤</span>
+                        </div>
+                        <div class="user-info">
+                            <h4>Michael Brown</h4>
+                            <p>Gaming Community</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Saya sudah memesan beberapa skin dari sini untuk event komunitas. Hasilnya selalu memuaskan dan peserta event sangat senang dengan skin custom mereka."</p>
+                    </div>
+                    <div class="skin-preview">
+                        <div style="background:#8A2BE2; height:150px; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:white; font-weight:bold;">Preview Skin Michael</span>
+                        </div>
+                        <p class="skin-name">"Mystic Sorcerer"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <span>👤</span>
+                        </div>
+                        <div class="user-info">
+                            <h4>Emily Davis</h4>
+                            <p>Minecraft Builder</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Skin yang saya pesan sesuai dengan tema bangunan yang saya buat. Proses revisi mudah dan cepat. Hasil akhirnya sangat memuaskan dan detail."</p>
+                    </div>
+                    <div class="skin-preview">
+                        <div style="background:#FF4500; height:150px; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:white; font-weight:bold;">Preview Skin Emily</span>
+                        </div>
+                        <p class="skin-name">"Desert Architect"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Layanan Kami</h2>
+                <p>Berbagai jenis layanan pembuatan skin Minecraft yang kami tawarkan</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Skin Custom</h3>
+                    <p>Buat skin Minecraft sesuai dengan ide dan konsep yang Anda inginkan</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Skin Group/Team</h3>
+                    <p>Skin dengan tema seragam untuk tim, komunitas, atau event khusus</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Revamp Skin</h3>
+                    <p>Perbarui skin lama Anda dengan desain yang lebih modern dan detail</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Express Service</h3>
+                    <p>Pengerjaan cepat untuk kebutuhan mendesak dengan kualitas terjamin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Siap Memesan Skin Custom Anda?</h2>
+            <p>Jadikan karakter Minecraft Anda lebih unik dan personal dengan skin custom berkualitas tinggi. Hubungi kami sekarang untuk konsultasi gratis!</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button">Pesan Sekarang</a>
+                <a href="#" class="cta-button secondary">Lihat Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Minecraft Skin Studio</h3>
+                    <p>Layanan profesional pembuatan skin Minecraft custom dengan kualitas terbaik dan harga terjangkau.</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📷</a>
+                        <a href="#">🎬</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Skin Custom</a></li>
+                        <li><a href="#">Skin Group</a></li>
+                        <li><a href="#">Revamp Skin</a></li>
+                        <li><a href="#">Express Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Informasi</h3>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Testimoni</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li>Email: hello@minecraftskin.studio</li>
+                        <li>Discord: MinecraftSkin#1234</li>
+                        <li>WhatsApp: +62 812-3456-7890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Minecraft Skin Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
