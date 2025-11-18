@@ -1,0 +1,513 @@
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* Light background for elegance */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #2c3e50; /* Dark blue/grey for professionalism */
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+p {
+    color: #666;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary brand color (Blue) */
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn-secondary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 15px;
+}
+.btn-special {
+    background-color: #28a745; /* Green for asking price/contact */
+    border-color: #28a745;
+}
+.btn-special:hover {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+}
+
+/* 1. HEADER & NAVIGATION */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #007bff;
+}
+.logo strong {
+    font-weight: 900;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* 2. HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.hero h1 strong {
+    color: #007bff;
+}
+
+.hero .subtitle {
+    font-size: 1.25em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GENERAL SECTION STYLES */
+section {
+    padding: 80px 0;
+}
+
+/* 3. SERVICES SECTION */
+.services {
+    background-color: white;
+    text-align: center;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.legal-note {
+    margin-top: 40px;
+    font-style: italic;
+    color: #999;
+}
+
+/* 4. PACKAGES SECTION */
+.packages {
+    background-color: #e9ecef;
+}
+
+.package-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.package {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1;
+    max-width: 400px;
+}
+
+.package i {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.package h3 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.price span {
+    font-size: 2.5em;
+    color: #28a745;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.package ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.package ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.package ul li i {
+    font-size: 1em;
+    color: #28a745;
+    margin-right: 10px;
+}
+
+.package.global i {
+    color: #ffc107; /* Yellow/Gold for Global */
+}
+
+/* 5. WHY CHOOSE US (FEATURES) */
+.features {
+    background-color: white;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item {
+    padding: 20px;
+}
+
+.feature-item i {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.feature-item h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* 6. IMPORTANT NOTE (DISCLAIMER) */
+.disclaimer {
+    background-color: #fce8e8; /* Light Red/Pink background */
+    border-top: 3px solid #dc3545; /* Red border */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.disclaimer i {
+    font-size: 2em;
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+.disclaimer h2 {
+    color: #dc3545;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.disclaimer p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2c3e50; /* Darker color for elegance */
+    color: #ecf0f1;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-brand {
+    flex: 2;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    font-size: 0.8em;
+    color: #bdc3c7;
+    margin-top: 10px;
+}
+
+.footer-links, .footer-contact {
+    flex: 1;
+}
+
+footer h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+footer i {
+    margin-right: 8px;
+}
+
+/* Styling Tambahan untuk Dropdown Negara */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.country-dropdown {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    appearance: none; /* Menyembunyikan ikon panah default di beberapa browser */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15 9.707l-1.414-1.414L10 11.586l-3.586-3.586-1.414 1.414z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.country-dropdown:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        margin: 10px 0;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    .nav-cta {
+        margin-top: 10px;
+    }
+    .service-cards, .package-cards, .footer-content {
+        flex-direction: column;
+    }
+    .package {
+        max-width: 100%;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .footer-brand, .footer-links, .footer-contact {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+/* Styling untuk WhatsApp Channel CTA (DIPERBARUI) */
+.whatsapp-channel-cta {
+    background-color: #e6ffed; /* Warna hijau muda */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.channel-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Tumpuk secara vertikal */
+    align-items: center; /* Pusatkan secara horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    max-width: 650px; /* Lebar maksimum yang lebih fokus */
+    margin: 0 auto; /* Pusatkan block */
+}
+
+.channel-box i {
+    font-size: 3.8em; /* Sedikit lebih besar */
+    color: #25D366; /* Hijau WhatsApp */
+    margin-bottom: 10px; /* Jarak bawah ikon */
+}
+
+.channel-box h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1.6em; /* Ukuran font judul yang lebih besar */
+}
+
+.channel-box p {
+    margin: 0;
+    max-width: 500px; /* Lebar maksimum paragraf */
+    line-height: 1.8; /* Kerapatan baris lebih baik */
+    font-size: 1.05em; /* Ukuran font paragraf sedikit lebih besar */
+    color: #555;
+}
+
+.btn-channel {
+    background-color: #25D366;
+    color: white;
+    font-weight: 700;
+    padding: 15px 35px; /* Padding lebih besar */
+    white-space: nowrap;
+    border: 2px solid #25D366;
+    border-radius: 50px; /* Lebih bulat */
+    font-size: 1.1em; /* Ukuran font tombol lebih besar */
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); /* Tambah bayangan */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-flex; /* Agar ikon dan teks sejajar */
+    align-items: center;
+    gap: 8px; /* Jarak antara teks dan ikon */
+    width: auto; /* Otomatis */
+    max-width: 90%; /* Pastikan tidak terlalu lebar di mobile */
+}
+
+.btn-channel:hover {
+    background-color: #1eaf53;
+    border-color: #1eaf53;
+    transform: translateY(-2px); /* Efek melayang */
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* Media Queries untuk Responsivitas (Perbarui bagian ini juga jika ada) */
+@media (max-width: 768px) {
+    .channel-box {
+        padding: 25px;
+        gap: 15px;
+    }
+    .channel-box h3 {
+        font-size: 1.4em;
+    }
+    .channel-box p {
+        font-size: 1em;
+    }
+    .btn-channel {
+        padding: 12px 25px;
+        font-size: 1em;
+        width: 100%; /* Tombol tetap penuh lebar di mobile */
+        max-width: 300px; /* Tapi batasi lebar agar tidak terlalu besar */
+    }
+}
+

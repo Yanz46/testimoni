@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilihan Negara Nomor Virtual - Global Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">GLOBAL **CONNECT**</div>
+            <nav>
+                <a href="index.html#home">Beranda</a>
+                <a href="index.html#layanan">Layanan</a>
+                <a href="#harga">Harga</a>
+                <a href="index.html#keunggulan">Keunggulan</a>
+            </nav>
+            <a href="https://wa.me/6283190293490?text=halo%20ka%20saya%20mau%20pesan%20nomor%20virtual" class="btn btn-primary nav-cta" target="_blank">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <section id="harga" class="packages" style="padding-top: 100px;">
+        <div class="container" style="max-width: 700px;">
+            <h2>Tentukan Pilihan Nomor Virtual Anda</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Pilih negara dan aplikasi tujuan Anda. Detail harga dan ketersediaan akan dikirimkan oleh Admin kami.</p>
+
+            <div class="package global" style="max-width: 100%; padding: 40px;">
+                <h3>🌎 Detail Pemesanan</h3>
+                
+                <div class="form-group">
+                    <label for="app-select" style="display: block; margin-bottom: 10px; font-weight: 600;">Aplikasi Tujuan:</label>
+                    <select id="app-select" class="country-dropdown">
+                        <option value="" disabled selected>-- Pilih Aplikasi (WhatsApp/Telegram/Lainnya) --</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="Telegram">Telegram</option>
+                        <option value="Aplikasi Lain">Aplikasi Lain</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country-select" style="display: block; margin-bottom: 10px; font-weight: 600;">Negara Tujuan:</label>
+                    <select id="country-select" class="country-dropdown">
+                        <option value="" disabled selected>-- Pilih Negara yang Anda Inginkan --</option>
+                        </select>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" id="wa-cta-button" class="btn btn-special btn-full" disabled style="padding: 15px 35px; font-size: 1.1em; opacity: 0.5; pointer-events: none;">
+                        <i class="fab fa-whatsapp"></i> Tanyakan Harga & Stok Admin
+                    </a>
+                </div>
+                <p style="text-align: center; font-size: 0.9em; margin-top: 15px; color: #dc3545;">*Silakan pilih Aplikasi dan Negara terlebih dahulu.</p>
+
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    GLOBAL CONNECT
+                    <p>&copy; 2025 JASA NOMOR VIRTUAL. All Rights Reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#layanan">Layanan</a>
+                    <a href="#harga">Harga</a>
+                    <a href="index.html#keunggulan">Keunggulan</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Hubungi Kami</h4>
+                    <a href="https://wa.me/6283190293490?text=halo%20ka%20saya%20mau%20pesan%20nomor%20virtual" target="_blank"><i class="fab fa-whatsapp"></i> Chat via WhatsApp</a>
+                    <p>Fast Response: 0831-9029-3490</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
