@@ -510,4 +510,51 @@ footer i {
         max-width: 300px; /* Tapi batasi lebar agar tidak terlalu besar */
     }
 }
+/* Styling Tambahan untuk Kartu Layanan Eksternal */
+.card-link {
+    text-decoration: none; /* Hapus garis bawah dari tautan */
+    color: inherit; /* Tetap menggunakan warna teks default */
+    position: relative;
+    /* Pastikan tampilan dasarnya sama dengan .card */
+    flex: 1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    background-color: #f7f7f7; /* Sedikit beda warna */
+    display: flex; /* Untuk menata konten internal */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.card-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card-link .btn-service {
+    margin-top: 15px;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.card-link:hover .btn-service {
+    background-color: #0056b3;
+}
+
+/* Pastikan kartu layanan normal tidak terpengaruh */
+.services .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-link i {
+    color: #007bff; /* Mengembalikan ke warna biru default, atau hapus jika ingin warna default kartu */
+}
